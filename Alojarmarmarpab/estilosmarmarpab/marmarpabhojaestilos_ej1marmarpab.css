@@ -1,0 +1,88 @@
+@charset "UTF-8";
+.claseparcialmarmarpab {
+  margin-top: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: center;
+}
+
+body {
+  counter-reset: canalesmarmarpab;
+}
+
+h1 {
+  counter-reset: seriesmarmarpab;
+}
+
+h2 {
+  counter-reset: personajesmarmarpab;
+}
+
+h1::before {
+  counter-increment: canalesmarmarpab;
+  content: "Suscripción " counter(canalesmarmarpab) ".";
+}
+
+h2::before {
+  counter-increment: seriesmarmarpab;
+  content: counter(canalesmarmarpab) "." counter(seriesmarmarpab);
+}
+
+h3::before {
+  counter-increment: personajesmarmarpab;
+  content: counter(canalesmarmarpab) "." counter(seriesmarmarpab) "." counter(personajesmarmarpab);
+  color: lightblue;
+}
+
+.contenedormarmarpab {
+  background-color: lightskyblue;
+  display: flex;
+  height: 300px;
+  padding: 15px;
+  align-content: center;
+}
+.contenedormarmarpab > .capaHijamarmarpab {
+  border: 1px solid black;
+  background-color: gainsboro;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+}
+.contenedormarmarpab > .capaHijamarmarpab > div {
+  border: 1px solid lightcoral;
+  text-align: center;
+  width: 33.3333333333%;
+  padding-top: 125px;
+}
+
+.menumarmarpab > .enlacesmarmarpab > a {
+  text-decoration: none;
+  color: white;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-left: 1px solid #333232;
+  border-right: 1px solid #333232;
+}
+
+.menumarmarpab {
+  background-color: #1a1919;
+  overflow: hidden;
+}
+.menumarmarpab > .enlacesmarmarpab > a:hover {
+  background-color: #333232;
+}
+
+@media screen and (max-width: 450px) {
+  .enlacesmarmarpab > a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=marmarpabhojaestilos_ej1marmarpab.css.map */
