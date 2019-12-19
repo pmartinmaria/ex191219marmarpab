@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+}
+
+.contenedormarmarpab {
+  min-height: 100%;
+}
+.contenedormarmarpab > div {
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
+  color: grey;
+}
+
+@media screen and (max-width: 500px) {
+  .contenedormarmarpab > div {
+    width: 100%;
+    float: none;
+  }
+}
+.menumarmarpab > .enlacesmarmarpab > a {
+  text-decoration: none;
+  color: white;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-left: 1px solid #333232;
+  border-right: 1px solid #333232;
+}
+
+.menumarmarpab {
+  background-color: #1a1919;
+  overflow: hidden;
+}
+.menumarmarpab > .enlacesmarmarpab > a:hover {
+  background-color: #333232;
+}
+
+@media screen and (max-width: 450px) {
+  .enlacesmarmarpab > a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=marmarpabhojaestilos_ej2marmarpab.css.map */
