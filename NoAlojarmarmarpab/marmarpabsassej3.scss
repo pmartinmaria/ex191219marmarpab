@@ -1,0 +1,55 @@
+%btnmarmarpab {
+    text-decoration: none;
+    background-color: white;
+    color: #888;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 5px;
+}
+@mixin botonColormarmarpab($color) {
+    border-color: $color;
+    background-color: $color;
+    color: white;
+    //lo que antes era la clase btn--big
+    font-size: 28px;
+    padding: 10px;
+    font-weight: 400;
+}
+.btn {
+    @extend %btnmarmarpab;
+    &__price {
+        background-color: white;
+        color: #fff;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-right: -10px;
+        font-weight: 600;
+        background-color: #333;
+        opacity: .4;
+        border-radius: 5px 0 0 5px;
+    }
+    &__text {
+        padding: 0 10px;
+        border-radius: 0 5px 5px 0;
+    }
+    &--orange{
+        @extend %btnmarmarpab;
+        @include botonColormarmarpab(#FF4136);
+    }
+    &--blue{
+        @extend %btnmarmarpab;
+        @include botonColormarmarpab(#0074D9);
+    }
+    &--green{
+        @extend %btnmarmarpab;
+        @include botonColormarmarpab(#3D9970);
+    }
+}
+body {
+    font-family: "fira-sans-2", sans-serif;
+    background-color: #ccc;
+}
